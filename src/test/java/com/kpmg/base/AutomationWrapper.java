@@ -8,7 +8,9 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
-
+/**
+ * Browser and Report Configuration 
+ */
 public class AutomationWrapper {
 	
 	Playwright playwright;
