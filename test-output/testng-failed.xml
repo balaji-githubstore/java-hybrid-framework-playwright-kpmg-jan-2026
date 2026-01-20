@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.kpmg.test.LoginUITest">
+      <class name="com.kpmg.test.LoginTest">
         <methods>
-          <include name="titleTest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="invalidLoginTest"/>
         </methods>
-      </class> <!-- com.kpmg.test.LoginUITest -->
+      </class> <!-- com.kpmg.test.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
