@@ -25,7 +25,8 @@ public class LoginTest extends AutomationWrapper {
 		page.locator("xpath=//input[@name='password']").fill("john123");
 		page.locator("xpath=//button[contains(normalize-space(),'Login')]").click();
 		
-		//Assert the error - Invalid credentials
+		String actualError=page.locator("xpath=//p[contains(normalize-space(),'Invalid')]").innerText();
+		Assert.assertEquals(actualError, "Invalid credentials");
 
 	}
 
