@@ -13,7 +13,7 @@ import com.microsoft.playwright.BrowserType.LaunchOptions;
  */
 public class AutomationWrapper {
 	
-	Playwright playwright;
+	private Playwright playwright;
 	protected Page page;
 
 	@BeforeMethod

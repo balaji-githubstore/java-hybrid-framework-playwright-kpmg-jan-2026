@@ -1,5 +1,6 @@
 package com.kpmg.test;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.kpmg.base.AutomationWrapper;
@@ -10,9 +11,11 @@ public class LoginTest extends AutomationWrapper {
 	public void validLoginTest()
 	{
 		page.locator("xpath=//input[@name='username']").fill("Admin");
-		//enter password
-		//click on login
+		page.locator("xpath=//input[@name='password']").fill("admin123");
+		page.locator("xpath=//button[contains(normalize-space(),'Login')]").click();
 		//Assert the header - Dashboard
+		String actualValue=page.locator("xpath=//h6[contains(normalize-space(),'Dashb')]").innerText();
+		Assert.assertEquals(actualValue, "Dashboard");
 	}
 
 }
