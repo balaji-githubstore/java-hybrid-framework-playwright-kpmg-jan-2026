@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 public class ZDemo1Test {
 
 	@DataProvider
-	public String[][] validData() {
-		String[][] data = new String[3][2];
+	public Object[][] validData() {
+		Object[][] data = new Object[3][2];
 		// i--> number of test case
 		// j-->number of arguments
 
@@ -30,5 +30,4 @@ public class ZDemo1Test {
 	public void validTest(String username, String password) {
 		System.out.println("valid " + username + password);
 	}
-
 }

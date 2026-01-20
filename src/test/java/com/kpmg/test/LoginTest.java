@@ -1,6 +1,7 @@
 package com.kpmg.test;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.kpmg.base.AutomationWrapper;
@@ -17,12 +18,24 @@ public class LoginTest extends AutomationWrapper {
 		Assert.assertEquals(actualValue, "Dashboard");
 	}
 	
-	//create a @DataProvider - invalidLoginData()
-//	saul, saul123, Invalid credentials
-//	john, john123, Invalid credentials
-	//will resume at 11:30 AM IST
+	@DataProvider
+	public Object[][] invalidLoginData()
+	{
+		Object[][] data=new Object[2][3]; 
+		
+		data[0][0]="saul";
+		data[0][1]="saul123";
+		data[0][2]="Invalid credentials";
+		
+		data[1][0]="john";
+		data[1][1]="john123";
+		data[1][2]="Invalid credentials";
+		
+		return data;
+	}
+	
 
-	@Test
+	@Test(dataProvider = "invalidLoginData")
 	public void invalidLoginTest(String username, String password, String expectedError) 
 	{
 		page.locator("xpath=//input[@name='username']").fill(username);
@@ -32,5 +45,4 @@ public class LoginTest extends AutomationWrapper {
 		String actualError = page.locator("xpath=//p[contains(normalize-space(),'Invalid')]").innerText();
 		Assert.assertEquals(actualError, expectedError);
 	}
-
 }
