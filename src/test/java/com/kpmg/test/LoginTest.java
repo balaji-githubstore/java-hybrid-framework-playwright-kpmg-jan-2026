@@ -35,3 +35,4 @@ public class LoginTest extends AutomationWrapper {
 		Assert.assertEquals(actualError, expectedError);
 	}
 }
+

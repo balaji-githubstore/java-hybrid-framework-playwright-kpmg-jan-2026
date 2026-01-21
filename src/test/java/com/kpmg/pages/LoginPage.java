@@ -26,5 +26,4 @@ public class LoginPage {
 	public String getInvalidErrorMessage() {
 		return page.locator("xpath=//p[contains(normalize-space(),'Invalid')]").innerText();
 	}
-
 }
