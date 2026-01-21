@@ -1,5 +1,8 @@
 package com.kpmg.utilities;
 
+import java.io.IOException;
+import java.lang.reflect.Method;
+
 import org.testng.annotations.DataProvider;
 
 /**
@@ -19,6 +22,24 @@ public class DataSource {
 		data[1][1] = "john123";
 		data[1][2] = "Invalid credentials";
 
+		return data;
+	}
+	
+	/**
+	 * CommonDataProvider to handle all @Test data. SheetName should be as per the @Test method name
+	 * @param method
+	 * @return Object[][]
+	 * @throws IOException
+	 */
+	@DataProvider
+	public Object[][] commonDataProvider(Method method) throws IOException
+	{
+		//SheetName is @Test method name
+		//method.getName(); --> Current @Test name which is nothing the sheetName
+		String sheetName= method.getName();
+		
+		Object[][] data=ExcelUtils.getSheetIntoTwoDimensionalArray
+				("test-data/orange-hrm-data.xlsx",sheetName);
 		return data;
 	}
 
