@@ -11,7 +11,6 @@ public class LoginPage {
 	}
 
 	public void enterUsername(String username) {
-
 		page.locator("xpath=//input[@name='username']").fill(username);
 	}
 
