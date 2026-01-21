@@ -7,7 +7,9 @@ import com.kpmg.base.AutomationWrapper;
 import com.kpmg.pages.DashboardPage;
 import com.kpmg.pages.LoginPage;
 import com.kpmg.utilities.DataSource;
-
+/**
+ * All Login Functionality test method
+ */
 public class LoginTest extends AutomationWrapper {
 
 	@Test(dataProviderClass = DataSource.class, dataProvider = "commonDataProvider")
