@@ -1,15 +1,13 @@
 package com.kpmg.base;
 
-import java.lang.reflect.Method;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import com.microsoft.playwright.BrowserType.LaunchOptions;
 /**
  * Browser and Report Configuration 
  */
