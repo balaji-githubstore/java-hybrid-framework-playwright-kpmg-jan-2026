@@ -7,12 +7,13 @@ import com.kpmg.base.AutomationWrapper;
 import com.kpmg.pages.DashboardPage;
 import com.kpmg.pages.LoginPage;
 import com.kpmg.utilities.DataSource;
+
 /**
  * All Login Functionality test method
  */
 public class LoginTest extends AutomationWrapper {
 
-	@Test(dataProviderClass = DataSource.class, dataProvider = "commonDataProvider")
+	@Test(dataProviderClass = DataSource.class, dataProvider = "commonDataProvider", groups = { "smoke", "regression" })
 	public void validLoginTest(String username, String password, String expectedValue) {
 
 		LoginPage login = new LoginPage(page);
@@ -25,7 +26,7 @@ public class LoginTest extends AutomationWrapper {
 		Assert.assertEquals(actualValue, expectedValue);
 	}
 
-	@Test(dataProviderClass = DataSource.class, dataProvider = "commonDataProvider")
+	@Test(dataProviderClass = DataSource.class, dataProvider = "commonDataProvider", groups = { "regression" })
 	public void invalidLoginTest(String username, String password, String expectedError) {
 
 		LoginPage login = new LoginPage(page);
@@ -37,4 +38,3 @@ public class LoginTest extends AutomationWrapper {
 		Assert.assertEquals(actualError, expectedError);
 	}
 }
-

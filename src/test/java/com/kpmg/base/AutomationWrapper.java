@@ -10,32 +10,32 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+
 /**
- * Browser and Report Configuration 
+ * Browser and Report Configuration
  */
 public class AutomationWrapper {
-	
+
 	private Playwright playwright;
 	protected Page page;
 
 	/**
 	 * Available browser name is chrome or msedge
 	 * https://playwright.dev/java/docs/browsers#google-chrome--microsoft-edge
+	 * 
 	 * @param browserName
 	 */
-	@BeforeMethod
-	@Parameters({"browser"})
-	public void setup(@Optional("chrome") String browserName) 
-	{
+	@BeforeMethod(alwaysRun = true)
+	@Parameters({ "browser" })
+	public void setup(@Optional("chrome") String browserName) {
 		playwright = Playwright.create();
-		Browser browser = playwright.chromium().launch(
-				new LaunchOptions().setHeadless(false).setChannel(browserName));
+		Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false).setChannel(browserName));
 		BrowserContext context = browser.newContext();
 		page = context.newPage();
 		page.navigate("https://opensource-demo.orangehrmlive.com");
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void teardown() {
 		playwright.close();
 	}

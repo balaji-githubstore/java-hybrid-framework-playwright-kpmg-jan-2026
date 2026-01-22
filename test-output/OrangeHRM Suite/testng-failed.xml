@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [OrangeHRM Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Login UI Test(failed)">
+<suite parallel="tests" name="Failed suite [OrangeHRM Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="msedge"/>
+  <test thread-count="5" parallel="tests" name="All Classes(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="com.kpmg.test.LoginUITest">
         <methods>
-          <include name="teardown"/>
           <include name="titleTest"/>
-          <include name="setup"/>
-          <include name="headerTest"/>
         </methods>
       </class> <!-- com.kpmg.test.LoginUITest -->
+      <class name="com.kpmg.test.LoginTest">
+        <methods>
+          <include name="validLoginTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.kpmg.test.LoginTest -->
     </classes>
-  </test> <!-- Login UI Test(failed) -->
+  </test> <!-- All Classes(failed) -->
 </suite> <!-- Failed suite [OrangeHRM Suite] -->
