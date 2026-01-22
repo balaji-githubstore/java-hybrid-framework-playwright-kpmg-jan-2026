@@ -20,7 +20,7 @@ public class LoginPage extends PlaywrightKeywords {
 
 	public void enterUsername(String username) {
 //		page.locator(usernameLocator).fill(username);
-		this.sendInputText(usernameLocator, username);
+		super.sendInputText(usernameLocator, username);
 	}
 
 	public void enterPassword(String password) {
