@@ -4,17 +4,12 @@
 
 	<parameter name="browser" value="msedge"></parameter>
 
-	<test thread-count="5" name="Login UI Test - Chrome">
-		<parameter name="browser" value="chrome"></parameter>
+	<test thread-count="5" name="All Classes">
 		<classes>
 			<class name="com.kpmg.test.LoginUITest" />
+			<class name="com.kpmg.test.LoginTest" />
 		</classes>
 	</test> <!-- Test -->
 
-	<test thread-count="5" name="Login UI Test - Edge">
-		<classes>
-			<class name="com.kpmg.test.LoginUITest" />
-		</classes>
-	</test> <!-- Test -->
 
 </suite> <!-- Suite -->
