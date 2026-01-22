@@ -1,12 +1,14 @@
 package com.kpmg.pages;
 
+import com.kpmg.base.PlaywrightKeywords;
 import com.microsoft.playwright.Page;
 
-public class DashboardPage {
+public class DashboardPage  extends PlaywrightKeywords {
 	
 	private Page page;
 
 	public DashboardPage(Page page) {
+		super(page);
 		this.page = page;
 	}
 

@@ -1,8 +1,9 @@
 package com.kpmg.pages;
 
+import com.kpmg.base.PlaywrightKeywords;
 import com.microsoft.playwright.Page;
 
-public class LoginPage {
+public class LoginPage extends PlaywrightKeywords {
 
 	private Page page;
 
@@ -12,19 +13,24 @@ public class LoginPage {
 	private String errorLocator = "xpath=//p[contains(normalize-space(),'Invalid')]";
 
 	public LoginPage(Page page) {
+		super(page);
 		this.page = page;
+
 	}
 
 	public void enterUsername(String username) {
-		page.locator(usernameLocator).fill(username);
+//		page.locator(usernameLocator).fill(username);
+		this.sendInputText(usernameLocator, username);
 	}
 
 	public void enterPassword(String password) {
-		page.locator(passwordLocator).fill(password);
+//		page.locator(passwordLocator).fill(password);
+		super.sendInputText(passwordLocator, password);
 	}
 
 	public void clickOnLogin() {
-		page.locator(loginLocator).click();
+//		page.locator(loginLocator).click();
+		super.clickOnElement(loginLocator);
 	}
 
 	public String getInvalidErrorMessage() {
