@@ -1,0 +1,80 @@
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 8 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 2 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\balaj\AppData\Local\Temp\testng-eclipse-752711370\testng-customsuite.xml
+
+2026-01-28 19:27:52 INFO  org.testng.internal.Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 2 ms.
+2026-01-28 19:28:07 INFO  com.kpmg.base.AutomationWrapper - Navigating to login page
+2026-01-28 19:28:07 INFO  com.kpmg.base.AutomationWrapper - Verifying username placeholder
+2026-01-28 19:28:09 ERROR com.kpmg.base.AutomationWrapper - Test FAILED: placeholderTest
+java.lang.AssertionError: expected [Username1] but found [username]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.failNotEquals(Assert.java:1590) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.assertEquals(Assert.java:656) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.assertEquals(Assert.java:666) ~[testng-7.11.0.jar:7.11.0]
+	at com.kpmg.test.LoginUITest.placeholderTest(LoginUITest.java:31) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) [testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) [testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) [testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) [testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) [testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) [testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) [testng-7.11.0.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-01-28 19:28:09 INFO  com.kpmg.base.AutomationWrapper - Test completed placeholderTest
+2026-01-28 19:28:10 INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.jq.Main@4f3e7344: 42 ms
+2026-01-28 19:28:10 INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.FailedReporter@7f08caf: 10 ms
+2026-01-28 19:28:10 INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.XMLReporter@2d0ecb24: 16 ms
+2026-01-28 19:28:10 INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@7be3a9ce: 20 ms
+2026-01-28 19:28:10 INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@2b59501e: 0 ms
+2026-01-28 19:28:10 INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@476e8796: 0 ms
