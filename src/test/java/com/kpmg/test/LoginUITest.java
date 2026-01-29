@@ -41,4 +41,4 @@ public class LoginUITest extends AutomationWrapper {
 			LOGGER.error("placeholderTest "+e.getMessage());
 		}
 	}
-}
+}//will start at 11:45 AM IST
