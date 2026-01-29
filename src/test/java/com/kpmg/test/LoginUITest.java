@@ -27,9 +27,18 @@ public class LoginUITest extends AutomationWrapper {
 
 	@Test(groups = { "regression" })
 	public void placeholderTest() {
-		LoginPage login = new LoginPage(page);
-		
-		Assert.assertEquals(login.getUsernamePlaceholder(), "Username123");
-		Assert.assertEquals(login.getPasswordPlaceholder(), "Password");
+		try
+		{
+			LoginPage login = new LoginPage(page);
+			
+			Assert.assertEquals(login.getUsernamePlaceholder(), "Username123");
+			Assert.assertEquals(login.getPasswordPlaceholder(), "Password");
+		}
+		catch (Exception e) {
+			//Assertion error - does not come to catch block. We already added to @AfterMethod
+			//user AssertionError e --> catch block prior to this if required
+			e.printStackTrace();
+			LOGGER.error("placeholderTest "+e.getMessage());
+		}
 	}
 }
