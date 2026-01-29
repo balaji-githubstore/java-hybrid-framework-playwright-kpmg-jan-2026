@@ -1,7 +1,9 @@
 package com.kpmg.base;
 
 import com.microsoft.playwright.Page;
-
+/**
+ * Playwright web and api keywords
+ */
 public class PlaywrightKeywords {
 
 	private Page page;
