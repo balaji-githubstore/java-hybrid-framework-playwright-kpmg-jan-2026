@@ -31,7 +31,7 @@ public class LoginUITest extends AutomationWrapper {
 		{
 			LoginPage login = new LoginPage(page);
 			
-			Assert.assertEquals(login.getUsernamePlaceholder(), "Username123");
+			Assert.assertEquals(login.getUsernamePlaceholder(), "Username");
 			Assert.assertEquals(login.getPasswordPlaceholder(), "Password");
 		}
 		catch (Exception e) {
