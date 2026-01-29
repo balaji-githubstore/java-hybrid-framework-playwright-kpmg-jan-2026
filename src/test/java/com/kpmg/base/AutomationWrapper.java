@@ -81,8 +81,6 @@ public class AutomationWrapper {
 			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
 			test.skip(result.getThrowable());
 		}
-
 		playwright.close();
 	}
-
 }
