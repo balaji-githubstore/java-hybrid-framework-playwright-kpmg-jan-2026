@@ -1,5 +1,10 @@
 package com.kpmg.test;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
@@ -18,6 +23,17 @@ public class ZDemoLog4jTest {
     void logCheck() {
         log.info("LOG4J WORKING");
         log.error("ERROR TEST");
+    }
+	
+
+	@Test
+    void readPropTest() throws FileNotFoundException, IOException {
+      
+		Properties prop = new Properties();
+		prop.load(new FileInputStream("src/test/resources/config.properties"));
+		
+		String url = prop.getProperty("url");
+		System.out.println(url);
     }
 
 }

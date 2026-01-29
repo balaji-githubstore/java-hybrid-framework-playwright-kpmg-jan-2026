@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.kpmg.test.LoginUITest">
+      <class name="com.kpmg.test.FacebookLoginTest">
         <methods>
           <include name="teardown"/>
           <include name="setup"/>
           <include name="end"/>
-          <include name="placeholderTest"/>
           <include name="init"/>
+          <include name="invalidFacebookLoginTest"/>
         </methods>
-      </class> <!-- com.kpmg.test.LoginUITest -->
+      </class> <!-- com.kpmg.test.FacebookLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

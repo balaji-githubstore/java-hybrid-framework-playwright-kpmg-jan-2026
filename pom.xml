@@ -73,6 +73,11 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>com.kpmg</groupId>
+			<artifactId>BDDFramework</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>
 
 
