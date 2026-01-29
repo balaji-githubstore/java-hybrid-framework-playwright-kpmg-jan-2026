@@ -13,6 +13,7 @@ public class LoginUITest extends AutomationWrapper {
 	public void titleTest() {
 		String actualTitle = page.title();
 		test.log(Status.INFO, "Actual Title "+actualTitle);
+		LOGGER.info("Actual Title "+actualTitle);
 		Assert.assertEquals(actualTitle, "OrangeHRM");
 	}
 
@@ -20,6 +21,7 @@ public class LoginUITest extends AutomationWrapper {
 	public void headerTest() {
 		String actualHeader = page.locator("xpath=//h5[text()='Login']").innerText();
 		test.log(Status.INFO, "Actual Header "+actualHeader);
+		LOGGER.info("Actual Header "+actualHeader);
 		Assert.assertEquals(actualHeader, "Login");
 	}
 

@@ -3,6 +3,8 @@ package com.kpmg.base;
 import java.lang.reflect.Method;
 import java.util.Base64;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -27,7 +29,7 @@ import com.microsoft.playwright.Playwright;
  * Browser and Report Configuration
  */
 public class AutomationWrapper {
-
+	public static final Logger LOGGER = LogManager.getLogger(AutomationWrapper.class);
 	private Playwright playwright;
 	protected Page page;
 	private static ExtentReports extent;
@@ -39,12 +41,14 @@ public class AutomationWrapper {
 			extent = new ExtentReports();
 			ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark.html");
 			extent.attachReporter(spark);
+			LOGGER.info("@BeforeSuite - Extent Report Initialized");
 		}
 	}
 
 	@AfterSuite
 	public void end() {
 		extent.flush();
+		LOGGER.info("@AfterSuite - Extent Report flushed");
 	}
 
 	/**
@@ -67,19 +71,23 @@ public class AutomationWrapper {
 	}
 
 	@AfterMethod(alwaysRun = true)
-	public void teardown(ITestResult result) {
+	public void teardown(ITestResult result,Method mtd) {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
+			
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " FAILED ", ExtentColor.RED));
 			test.addScreenCaptureFromBase64String(Base64.getEncoder().encodeToString(page.screenshot()));
 			test.fail(result.getThrowable());
-
+			
+			LOGGER.error("Test FAILED: " + mtd.getName(), result.getThrowable());
+			
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " PASSED ", ExtentColor.GREEN));
-
+			LOGGER.info("Test PASSED: " + mtd.getName());
 		} else {
 			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
 			test.skip(result.getThrowable());
+			LOGGER.warn("Test SKIPPED: " + mtd.getName(), result.getThrowable());
 		}
 		playwright.close();
 	}
