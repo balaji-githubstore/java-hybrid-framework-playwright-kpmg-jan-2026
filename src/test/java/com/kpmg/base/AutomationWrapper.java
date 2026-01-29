@@ -64,7 +64,7 @@ public class AutomationWrapper {
 		test = extent.createTest(method.getName());
 
 		playwright = Playwright.create();
-		Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false).setChannel(browserName));
+		Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(true).setChannel(browserName));
 		BrowserContext context = browser.newContext();
 		page = context.newPage();
 		page.navigate("https://opensource-demo.orangehrmlive.com");
