@@ -1,71 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-21T10:08:24 IST" name="Default suite" finished-at="2026-01-21T10:10:30 IST" duration-ms="125507">
+  <suite started-at="2026-01-21T13:30:30 IST" name="OrangeHRM Suite" finished-at="2026-01-21T13:31:22 IST" duration-ms="51209">
     <groups>
     </groups>
-    <test started-at="2026-01-21T10:08:24 IST" name="Default test" finished-at="2026-01-21T10:10:30 IST" duration-ms="125507">
-      <class name="com.kpmg.test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.kpmg.test.LoginTest@795509d9]" started-at="2026-01-21T10:09:13 IST" name="setup" finished-at="2026-01-21T10:10:02 IST" duration-ms="48853" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="invalidLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.kpmg.test.LoginTest@795509d9]" started-at="2026-01-21T10:10:02 IST" name="invalidLoginTest" data-provider="commonDataProvider" finished-at="2026-01-21T10:10:07 IST" duration-ms="5380" status="PASS">
+    <test started-at="2026-01-21T13:30:30 IST" name="Login UI Test - Chrome" finished-at="2026-01-21T13:31:18 IST" duration-ms="47242">
+      <class name="com.kpmg.test.LoginUITest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kpmg.test.LoginUITest@49e53c76]" started-at="2026-01-21T13:30:30 IST" name="setup" finished-at="2026-01-21T13:31:05 IST" duration-ms="34876" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[bala]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[bala123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid credentials]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.kpmg.test.LoginTest@795509d9]" started-at="2026-01-21T10:10:07 IST" name="teardown" finished-at="2026-01-21T10:10:10 IST" duration-ms="2978" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="headerTest()[pri:0, instance:com.kpmg.test.LoginUITest@49e53c76]" started-at="2026-01-21T13:31:05 IST" name="headerTest" finished-at="2026-01-21T13:31:07 IST" duration-ms="1444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headerTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.kpmg.test.LoginUITest@49e53c76]" started-at="2026-01-21T13:31:07 IST" name="teardown" finished-at="2026-01-21T13:31:07 IST" duration-ms="434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.kpmg.test.LoginTest@795509d9]" started-at="2026-01-21T10:10:10 IST" name="setup" finished-at="2026-01-21T10:10:21 IST" duration-ms="11037" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="invalidLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.kpmg.test.LoginTest@795509d9]" started-at="2026-01-21T10:10:21 IST" name="invalidLoginTest" data-provider="commonDataProvider" finished-at="2026-01-21T10:10:27 IST" duration-ms="6077" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kpmg.test.LoginUITest@49e53c76]" started-at="2026-01-21T13:31:07 IST" name="setup" finished-at="2026-01-21T13:31:17 IST" duration-ms="9738" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[jack]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[jack123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid credentials]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.kpmg.test.LoginTest@795509d9]" started-at="2026-01-21T10:10:27 IST" name="teardown" finished-at="2026-01-21T10:10:30 IST" duration-ms="2318" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="titleTest()[pri:0, instance:com.kpmg.test.LoginUITest@49e53c76]" started-at="2026-01-21T13:31:17 IST" name="titleTest" finished-at="2026-01-21T13:31:17 IST" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.kpmg.test.LoginUITest@49e53c76]" started-at="2026-01-21T13:31:17 IST" name="teardown" finished-at="2026-01-21T13:31:18 IST" duration-ms="567" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.kpmg.test.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.kpmg.test.LoginUITest -->
+    </test> <!-- Login UI Test - Chrome -->
+    <test started-at="2026-01-21T13:30:30 IST" name="Login UI Test - Edge" finished-at="2026-01-21T13:31:22 IST" duration-ms="51209">
+      <class name="com.kpmg.test.LoginUITest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kpmg.test.LoginUITest@489115ef]" started-at="2026-01-21T13:30:30 IST" name="setup" finished-at="2026-01-21T13:31:05 IST" duration-ms="34718" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[msedge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="headerTest()[pri:0, instance:com.kpmg.test.LoginUITest@489115ef]" started-at="2026-01-21T13:31:05 IST" name="headerTest" finished-at="2026-01-21T13:31:09 IST" duration-ms="3851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headerTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.kpmg.test.LoginUITest@489115ef]" started-at="2026-01-21T13:31:09 IST" name="teardown" finished-at="2026-01-21T13:31:12 IST" duration-ms="2568" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kpmg.test.LoginUITest@489115ef]" started-at="2026-01-21T13:31:12 IST" name="setup" finished-at="2026-01-21T13:31:21 IST" duration-ms="9100" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[msedge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="titleTest()[pri:0, instance:com.kpmg.test.LoginUITest@489115ef]" started-at="2026-01-21T13:31:21 IST" name="titleTest" finished-at="2026-01-21T13:31:21 IST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.kpmg.test.LoginUITest@489115ef]" started-at="2026-01-21T13:31:21 IST" name="teardown" finished-at="2026-01-21T13:31:22 IST" duration-ms="813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.kpmg.test.LoginUITest -->
+    </test> <!-- Login UI Test - Edge -->
+  </suite> <!-- OrangeHRM Suite -->
 </testng-results>

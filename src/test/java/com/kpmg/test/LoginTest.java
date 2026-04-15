@@ -4,27 +4,37 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.kpmg.base.AutomationWrapper;
+import com.kpmg.pages.DashboardPage;
+import com.kpmg.pages.LoginPage;
 import com.kpmg.utilities.DataSource;
-
+/**
+ * All Login Functionality test method
+ */
 public class LoginTest extends AutomationWrapper {
 
-	@Test(dataProviderClass = DataSource.class,dataProvider = "commonDataProvider")
-	public void validLoginTest(String username,String password,String expectedValue) {
-		page.locator("xpath=//input[@name='username']").fill(username);
-		page.locator("xpath=//input[@name='password']").fill(password);
-		page.locator("xpath=//button[contains(normalize-space(),'Login')]").click();
+	@Test(dataProviderClass = DataSource.class, dataProvider = "commonDataProvider")
+	public void validLoginTest(String username, String password, String expectedValue) {
 
-		String actualValue = page.locator("xpath=//h6[contains(normalize-space(),'Dashb')]").innerText();
+		LoginPage login = new LoginPage(page);
+		login.enterUsername(username);
+		login.enterPassword(password);
+		login.clickOnLogin();
+
+		DashboardPage dashboard = new DashboardPage(page);
+		String actualValue = dashboard.getDashboardHeader();
 		Assert.assertEquals(actualValue, expectedValue);
 	}
 
-	@Test(dataProviderClass = DataSource.class,dataProvider = "commonDataProvider")
+	@Test(dataProviderClass = DataSource.class, dataProvider = "commonDataProvider")
 	public void invalidLoginTest(String username, String password, String expectedError) {
-		page.locator("xpath=//input[@name='username']").fill(username);
-		page.locator("xpath=//input[@name='password']").fill(password);
-		page.locator("xpath=//button[contains(normalize-space(),'Login')]").click();
 
-		String actualError = page.locator("xpath=//p[contains(normalize-space(),'Invalid')]").innerText();
+		LoginPage login = new LoginPage(page);
+		login.enterUsername(username);
+		login.enterPassword(password);
+		login.clickOnLogin();
+
+		String actualError = login.getInvalidErrorMessage();
 		Assert.assertEquals(actualError, expectedError);
 	}
 }
+
