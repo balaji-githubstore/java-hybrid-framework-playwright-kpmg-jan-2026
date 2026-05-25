@@ -45,6 +45,6 @@ public class LoginUITest extends AutomationWrapper {
 	@Test
 	public void versionTest()
 	{
-		System.out.println("done");
+		System.out.println("done123");
 	}
 }
